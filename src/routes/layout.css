@@ -1,1 +1,8 @@
 @import 'tailwindcss';
+
+body {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgb(242, 242, 242) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(242, 242, 242) 1px, transparent 1px);
+}
