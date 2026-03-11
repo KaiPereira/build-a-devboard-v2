@@ -2,18 +2,19 @@
 
 An intermediate tutorial to learn about decoupling, different SoC's and much more. Make sure you've at least created a [macropad](https://hackpad.hackclub.com/) before trying this!
 
-Choose an SoC
-- RP2040
+Choose an SoC:
+
+**RP2040**
 - Simple to program
 - High performance, low cost
 - Pretty flexible
 
-- ESP32 S3 WROOM 1
+**ESP32 S3 WROOM 1**
 - Integrated bluetooth and wifi
 - Low power consumption
 - Good for IoT and wearables
 
-- STM32G031C6T6
+**STM32G031C6T6**
 - High performance, low power
 - Analog peripherals
 - Good for industrial applications
