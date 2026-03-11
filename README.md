@@ -1,50 +1,42 @@
-# Build a Devboard V2:
+# sv
 
-An intermediate tutorial to learn about decoupling, different SoC's and much more. Make sure you've at least created a [macropad](https://hackpad.hackclub.com/) before trying this!
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-Choose an SoC:
+## Creating a project
 
-**RP2040**
-- Simple to program
-- High performance, low cost
-- Pretty flexible
+If you're seeing this, you've probably already done this step. Congrats!
 
-**ESP32 S3 WROOM 1**
-- Integrated bluetooth and wifi
-- Low power consumption
-- Good for IoT and wearables
+```sh
+# create a new project
+npx sv create my-app
+```
 
-**STM32G031C6T6**
-- High performance, low power
-- Analog peripherals
-- Good for industrial applications
+To recreate this project with the same configuration:
 
-Configure and decouple your SoC
+```sh
+# recreate this project
+npx sv@0.12.5 create --template minimal --types ts --add tailwindcss="plugins:none" --install npm ./
+```
 
+## Developing
 
-Choose your power source:
-- Mini USB
-- Micro USB
-- USB-C
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-Create your voltage rails...
+```sh
+npm run dev
 
-Pi Pico and zero 2W have the same amount of headers!
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-Add your own peripheral:
-- Motor driver
-- Battery
-- Gyro/temp sensor
-- LED matrix
-- Your own, just don't make it something simple like a neopixel!
+## Building
 
-Choose your form factor:
-- Pi Pico
-- Pi Zero 2W
-- Build your own!
+To create a production version of your app:
 
-Layout all your components
-Route
-Run DRC
-Prepare manufacturing
-Ship
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
